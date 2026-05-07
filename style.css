@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #ff4f93;
+
+  /* Pink polka dot background */
+  background-color: #ffd6e7;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.7) 12%, transparent 13%);
+  background-size: 40px 40px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 24px;
+
+  background: rgba(255, 255, 255, 0.88); /* less transparent */
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.images img {
+  width: min(92vw, 520px);
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.img2 {
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+.img2:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.image2-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.heart {
+  position: absolute;
+  font-size: 28px;
+  animation: floatUp 2s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-180px) scale(1.8);
+  }
+}
+
+audio {
+  margin-top: 20px;
+  width: min(92vw, 420px);
+  border-radius: 20px;
+}
